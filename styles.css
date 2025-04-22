@@ -1,0 +1,351 @@
+/* estilo */
+html, body {
+  height: 100%;/* que tanto de la pantalla */
+  width: 100%;/*  lo mismo q arriba*/
+  margin: 0;/* determinan si se separan de los bordes de la pagina */
+  padding: 0;/* lo mismo q arriba*/
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;/* que fuentes se usan en la pagina */
+  background: linear-gradient(
+    to bottom,
+    rgb(23, 42, 119),
+    rgb(20, 34, 104),
+    rgb(18, 28, 87),
+    rgb(14, 24, 75),
+    rgb(10, 21, 67)
+    );
+    /* degradado de la imagen al fondo general, definicion del body (no funciono :c) */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+ 
+  
+  
+  /* esconde la scrollbar esa de los cojones */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+/*lo mismo pero para Chrome, Safari and Opera */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header */
+.header {
+  display: flex; /*lo alinea automaticamente */
+  align-items: center; /* mantiene todo en la misma linea vertical */
+  justify-content: space-between; /* agrega espacio entre los elementos */
+  padding: 200px;/* tamano del header en la pagina */
+  background:
+  
+   url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg') no-repeat center center; /*fondo del header... grande wikipedia*/
+  background-size: cover; /* lo mueve para todo el header */
+  
+}
+
+.header-text { /* parametros del texto del header  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: floralwhite;
+}
+
+.header-text h1 { /*  parametros de los titulos del header, modifica 'cubesat'*/
+  font-size: 50px;
+  margin: 0;
+}
+
+.header-text p { /* modifica el resto del texto */
+  margin: 0;
+}
+
+/* alinea la imagen del cubesat */
+.header-image {
+  max-width: 400px;
+  height: auto; /* ajusta segun el tamano del display */
+  margin-left: 20px; /* espacio entre imagen y texto */
+}
+
+/*crea la barra de navegacion*/
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;/* que tanto de la pantalla (en % ocupa de largo) */
+  height: 50px;/* q tanto ocupa en px de ancho */
+  background-color: rgba(255, 255, 255, 0.1); /* la hace traslucida */
+  overflow: hidden;
+  transition: top 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.topnav.hidden {
+  transform: translateY(-100%); /* esconde la barra cuando scrolleas */
+}
+
+/* modifica los links */
+.topnav a {
+  float: right; /* de que lado estan */
+  display: block;
+  color: #f2f2f2; /* color texto */
+  text-align: center;
+  padding: 18px 24px; /* tamano boton */
+  text-decoration: none;
+}
+
+/* cambia el color cuando se le pasa el mnouse encima */
+.topnav a:hover {
+  background-color: rgb(2, 38, 68);
+  color: black; /* no soy fan del negro, igual y pruebo otrs colores */
+}
+
+/* Responsive layout -cuando la pantalla es mayor a 800 pixeles stackea las columnas una sobre otra en vez de escalarlas */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout lo mismo pero pa los links */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+/* esas dos cosas de arriba se las pedia a chat gpt, gran cabron chat gpt */
+
+/* aca inicia todo para el primer rectangulo */
+.color-rectangle { /* le da formato general  */
+  max-width: 1000px; /* tamano */
+  min-height: 400px; /* tamano */
+  margin: 50px auto;  /* separaciom */
+  padding: 50px;
+  box-sizing: border-box;
+  line-height: 2;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 30px;/* suaviza el rectangulo  */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.color-rectangle p { /* modifica todo el texto que este entre ps (todo el texto basicamente) */
+  font-size: 24px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.rect1 {/* modifica el color */
+  background-color: rgb( 170, 184, 217);
+  display: flex;
+}
+
+.rect1-text p{ /* lo mismo q el anterior pero para el rectangulo 1(tengo que ver por que no se aplica todo pa uno)*/
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 26px;
+}
+
+
+.rect1-image img {/* le da formmato a la imagen */
+  max-width: 1000px;
+  height: auto;
+  border-radius: 5px;
+}
+/* aqui acaba todo lo q comprende el primer rectangulo */
+
+/* inicia el rectangulo 2 */
+.rect2 {
+ /* a grandes rasgso comparten todos la misma configuracion */
+  max-width: 1000px;
+  min-height: 500px;
+  margin: 40px auto;
+  padding: 40px;
+  box-sizing: border-box;
+  color: black;
+  font-size: 24px;
+  line-height: 1.8;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-color: rgb( 170, 184, 217);/* Light blue */
+  display:grid;
+}
+
+.rect2-top-text {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  justify-self: center;
+  align-items: center;
+}
+
+.rect2-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rect2-left-text, .rect2-right-text {
+  flex: 1;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: .5;
+}
+
+.rect2-image img {
+  max-width:500px;
+  height: auto;
+  margin: 0 15px;
+  border-radius: 5px;
+}
+/* termna el rectangulo 2*/
+
+/* inicia rectangulo 3 
+que bueno soy nombrando*/
+
+.rect3 {
+  max-width: 1000px;
+  min-height: 500px;
+  margin: 40px auto;
+  padding: 40px;
+  padding-right: 5px;
+  box-sizing: border-box;
+  color: black;
+  font-size: 24px;
+  line-height: 1.8;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-color: rgb( 170, 184, 217); 
+  display: flex;
+}
+
+.rect3-left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px; 
+  height: 600px;
+  margin-right: 7.5px;
+}
+
+.small-rect {
+  height: 80px; 
+  border-radius: 5px;
+  margin-bottom: 2px;
+  padding: 1px;
+  font-size: 25px; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.rect3-rect1 {
+  background-color: rgb( 60, 79, 132);
+}
+
+.rect3-rect2 {
+  background-color:  rgb( 60, 79, 132);
+}
+
+.rect3-rect3 {
+  background-color: rgb(60, 79, 132);
+}
+
+.rect3-separator {
+  width: 2px;
+  background-color:  rgb(47, 60, 96);
+  margin-right: 15px;
+}
+
+.rect3-right-text {
+  flex: 0.75;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/*  cuatroooooo
+    ooooooo
+    ooooooo
+   ooooooooo
+*/
+.rect4 {
+ 
+  max-width: 1000px;
+  min-height: 500px;
+  margin: 40px auto;
+  padding: 40px;
+  box-sizing: border-box;
+  color: black;
+  font-size: 24px;
+  line-height: 1.8;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-color: rgb( 170, 184, 217);
+}
+
+.rect4-text-columns {/* parametros para acomodar el texto */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; 
+}
+
+.rect4-left-column, .rect4-right-column {/* formato para las columnas (ambas son iguales) */
+  width: 48%;/* que tanto del rectangulo main ocupan */
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.rect4-bullet-points {/* crea los bulletpoints */
+  margin: 0;
+  padding: 3px; 
+  display: flex;/* el texto se ajusta segub el espacio */
+  list-style: none;
+  gap: 10px; /* separacion entre ellos */
+  font-size: 14px;
+  line-height: 1.4;
+  justify-content: center;
+}
+
+.rect4-bullet-points li {
+  position: relative;
+  padding-left: 40px;/* mueve que tan cerca esta iconos del texto */
+  
+}
+
+.rect4-bullet-points li::before {
+  content: "";/* establece los parametros para los iconos de los bulletpoints */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;/* tamano*/
+  height: 32px;/* tamano */
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1px;
+}
+/* imagenes de los bullet points */
+.rect4-bullet-points li:nth-child(1)::before {
+  background-image: url("imagenes/ensayo.png");
+  
+}
+
+.rect4-bullet-points li:nth-child(2)::before {
+  background-image: url("imagenes/planeta.png");
+}
+
+.rect4-bullet-points li:nth-child(3)::before {
+  background-image: url("imagenes/hoja.png");
+}
+.rect4-bullet-points li:nth-child(4)::before {
+  background-image: url("imagenes/foco.png");
+}
+
+/* Es inecesariamente mas largo de lo que deberia, pa la siguiente actualizacion debo darle unas vueltas para optimizar */
+/* PXGN */
