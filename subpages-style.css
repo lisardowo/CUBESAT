@@ -1,0 +1,365 @@
+/* Styles for custom large rectangle menu in Versiones.html */
+
+.custom-menu-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.menu-arrow {
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-arrow:focus {
+  outline: 2px solid #bbb;
+}
+
+.menu-content {
+  overflow: hidden;
+  max-height: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin-top: 10px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-content.expanded {
+  max-height: 1000px; /* enough to show content */
+  padding: 20px;
+}
+
+.content-left {
+  flex: 1;
+  font-size: 16px;
+  color: #222;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-right img {
+  border-radius: 5px;
+  max-width: 150px;
+  height: auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-arrow {
+  background-color: #c5c6c7;
+  color: rgb(36, 35, 35);
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.menu-arrow::before {
+  content: ">";
+  margin-right: 10px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.menu-arrow[aria-expanded="true"]::before {
+  content: "v";
+}
+
+.menu-arrow:focus {
+  outline: 2px solid #f0f0f0;
+}
+
+.menu-content {
+  overflow: hidden;
+  max-height: 0;
+  background-color: #d0d9f0;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-top: 5px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.menu-content.expanded {
+  max-height: 500px; /* enough to show content */
+  padding: 15px;
+}
+
+.content-left {
+  flex: 1;
+  font-size: 16px;
+  color: #000;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-right img {
+  border-radius: 5px;
+  max-width: 150px;
+  height: auto;
+}
+/* Modified styles for full screen header without spaces */
+
+/* Header styles copied from style.css */
+.header {
+  display: flex; /*lo alinea automaticamente */
+  align-items: center; /* mantiene todo en la misma linea vertical */
+  justify-content: space-between; /* agrega espacio entre los elementos */
+  padding: 230px;/* tamano del header en la pagina */
+  background: rgb(115, 184, 230); /*fondo del header... grande wikipedia*/
+  background-size: cover; /* lo mueve para todo el header */
+  
+}
+
+.header-text { /* parametros del texto del header  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: floralwhite;
+}
+
+.header-text h1 { /*  parametros de los titulos del header, modifica 'cubesat'*/
+  font-size: 42px;
+  margin: 0;
+}
+.header-text h2 { /*  parametros de los titulos del header, modifica 'cubesat'*/
+  font-size: 30px;
+  margin: 0;
+}
+
+.header-text p { /* modifica el resto del texto */
+  font-size: 28px;
+  margin: 0;
+}
+
+/* alinea la imagen del cubesat */
+.header-image {
+  max-width: 1000px;
+  height: auto; /* ajusta segun el tamano del display */
+  margin-left: 290px; /* espacio entre imagen y texto */
+}
+
+/* Responsive layout -cuando la pantalla es mayor a 800 pixeles stackea las columnas una sobre otra en vez de escalarlas */
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 100px 20px;
+    height: auto; /* override height for smaller screens */
+  }
+  .header-text h1 {
+    font-size: 32px;
+  }
+  .header-text p {
+    font-size: 16px;
+  }
+  .header-image {
+    max-width: 200px;
+    margin-left: 10px;
+  }
+}
+
+/* Responsive layout lo mismo pero pa los links */
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 60px 10px;
+    height: auto; /* override height for smaller screens */
+  }
+  .header-text h1 {
+    font-size: 24px;
+  }
+  .header-text p {
+    font-size: 14px;
+  }
+  .header-image {
+    max-width: 150px;
+    margin-left: 5px;
+  }
+}
+
+html, body {
+  height: 100%;/* que tanto de la pantalla */
+  width: 100%;/*  lo mismo q arriba*/
+  margin: 0;/* determinan si se separan de los bordes de la pagina */
+  padding: 0;/* lo mismo q arriba*/
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;/* que fuentes se usan en la pagina */
+  background: rgb(115, 184, 230);
+   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+  /* esconde la scrollbar esa de los cojones */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Styles for Proximo lanzamiento page */
+.proximo-lanzamiento-body {
+  background: url('imagenes/fondolanz.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 0 0 0; /* space for fixed topnav */
+}
+
+/*crea la barra de navegacion*/
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;/* que tanto de la pantalla (en % ocupa de largo) */
+  height: 50px;/* q tanto ocupa en px de ancho */
+  background-color: rgba(255, 255, 255, 0.1); /* la hace traslucida */
+  overflow: hidden;
+  transition: top 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.topnav.hidden {
+  transform: translateY(-100%); /* esconde la barra cuando scrolleas */
+}
+
+/* modifica los links */
+.topnav a {
+  float: right; /* de que lado estan */
+  display: block;
+  color: #f2f2f2; /* color texto */
+  text-align: center;
+  padding: 18px 24px; /* tamano boton */
+  text-decoration: none;
+  position: relative; /* for pseudo-element */
+  overflow: hidden; /* contain the fill animation */
+  z-index: 0;
+}
+
+/* cambia el color cuando se le pasa el mnouse encima */
+/* Remove direct background-color change and add fill animation */
+.topnav a:hover {
+  color: rgb(0, 0, 0); /* no soy fan del negro, igual y pruebo otrs colores */
+}
+
+.topnav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(188, 217, 223);
+  z-index: -1;
+  transition: width 0.6s ease;
+}
+
+.topnav a:hover::before {
+  width: 100%;
+}
+
+.proximo-lanzamiento-container {
+  display: flex;
+  height: calc(100vh - 50px);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.counter {
+  font-size: 72px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.launch-info {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.launch-image {
+  max-width: 80%;
+  height: auto;
+}
+
+.back-link {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
