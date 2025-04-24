@@ -1,0 +1,58 @@
+
+/* Styles for Proximo lanzamiento page */
+.proximo-lanzamiento-body {
+  background: url('imagenes/fondolanz.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 0 0 0;
+}
+
+.proximo-lanzamiento-container {
+  display: flex;
+  height: calc(100vh - 50px);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.counter {
+  font-size: 72px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.launch-info {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.launch-image {
+  max-width: 80%;
+  height: auto;
+}
+
+.back-link {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 18px;
+  text-decoration: underline;
+}

@@ -1,0 +1,82 @@
+
+/* Styles for custom large rectangle menu in Versiones.html */
+.custom-menu-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.menu-arrow {
+  background-color: #c5c6c7;
+  color: rgb(36, 35, 35);
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.menu-arrow::before {
+  content: ">";
+  margin-right: 10px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.menu-arrow[aria-expanded="true"]::before {
+  content: "v";
+}
+
+.menu-arrow:focus {
+  outline: 2px solid #f0f0f0;
+}
+
+.menu-content {
+  overflow: hidden;
+  max-height: 0;
+  background-color: #d0d9f0;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-top: 5px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.menu-content.expanded {
+  max-height: 500px;
+  padding: 15px;
+}
+
+.content-left {
+  flex: 1;
+  font-size: 16px;
+  color: #000;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-right img {
+  border-radius: 5px;
+  max-width: 600px;
+  height: auto;
+}

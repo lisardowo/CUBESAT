@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Versiones</title>
+    <link rel="stylesheet" href="estilos-generales.css" />
+    <link rel="stylesheet" href="versiones.css" />
+    <script src="subpages-scripts.js"></script>
+   
+</head>
+<body>
+<!-- top navigation bar from main page -->
+<div class="topnav" id="topnav">
+  <a href="proximo-lanzamiento.html">Proximo lanzamiento</a>
+  <a href="informacion-recolectada.html">Informacion recolectada</a>
+  <a href="paso-a-paso.html">Paso a paso</a>
+  <a href="index.html">Inicio</a>
+</div>
+<!-- definicion del header -->
+<div class="header">
+  
+  <div class="header-text">
+    <h1>Version 2:</h1>
+    <h2> Mejoras:</h2>
+    <p>• Construccion</p>
+    <p>• Materiales</p>
+    <p>• Sensores</p>
+    <p>•Sustentabilidad</p>
+
+  </div>
+  <img src="imagenes/version 2.png" alt="Header Image" class="header-image" />
+</div>
+
+  <!-- Custom large rectangle menu replacing dropdown -->
+  <div class="custom-menu-container">
+    <div class="menu-item">
+      <button class="menu-arrow" aria-expanded="false" aria-controls="version2-content">Version 2</button>
+         
+      <div id="version2-content" class="menu-content" hidden>
+        <div class="content-left">
+          <p>La siguiente version aun no se ha probado, sin embargo ya tenemos en posecion el prototipo.
+            posterior al lanzamiento del primer dispositivo hicimos mejoras y redisenos del prototipoa demas de planear aumentar los componentes del satelite.
+
+          </p>
+          <p><br>Las mejoras:</br>
+          <br>Aumento de sensores: Implementamos un sensor de co2 (para medir contaminacion ambiental) y una camara para tomar fotos del entorno</br>
+          <br>Mejora en la sustentabilidad: Incorporamos un panel solar junto con baterias recargables para asegurar la suficiente energia en la mision</br>
+          <br>Rediseño: tuvo un gran rediseño, primero se creo una apertura en el techo del satelite para colocar el panel solar, la parte frontal a su vez se le hizo una pared solida con 3 agujeros, uno con una pendiente que focaliza el flujo de aire en los sensores y dos pequeños abajo para acceder a los puertos de programacion y alimentacion del arduino. Finalmente se le agrego un tercer soporte a las paredes en forma de x para ayudar a distribuir mejor la fuerza de los impactos y evitar roturas</br></p>
+        </div>
+        <div class="content-right">
+          <img src="imagenes/case2.png" alt="Version 2 Image">
+          
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <button class="menu-arrow" aria-expanded="false" aria-controls="version1-content">Version 1</button>
+      <div id="version1-content" class="menu-content" hidden>
+        <div class="content-left">
+          <p>Esta version presenta un diseño sencillo, dos paredes con cruces para darle un flujo de aire y resistencia a la estructura ademas de permitir el acceso a puertos del arduino gracias a su ancha apertura
+            echo de pla presentaba algo de debilidad a las caidas pero dentro de lo que cabe era bastante resistente
+          </p>
+          <p>sus componentes son: </p>
+          <br>Arduino Uno - Tarjeta de programación (OBC)</br>
+          <br>Sensor DHT11 - Recolección de información</br>
+          <br>Impresora 3D y filamento PLA - Fabricación de la carcasa del cubesat</br>
+          <br>Jumpers - Conectar el sensor al Arduino</br>
+          <br>SD card - Recolección información</br>
+          <br>Módulo de SD card para Arduino</br>
+          <br>Batería de 9 voltios y su respectivo portabatería - Alimentar el sistema</br>
+      
+        </div>
+        <div class="content-right">
+          <img src="imagenes/V1.png" alt="Version 1 Image" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
