@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paso a paso - Test Format</title>
+    <link rel="stylesheet" href="paso-a-paso.css" />
+    <link rel="stylesheet" href="estilos-generales.css" />
+    <script src="subpages-scripts.js" defer></script>
+</head>
+<body>
+    <h1>Paso a paso: SURPONG-satV1</h1>
+
+    <div class="step-container active">
+        <div class="content-left">
+            <h2>Paso 1: Reunir los componentes</h2>
+            <p>Antes de comenzar, asegúrate de tener todos los componentes necesarios para armar el CubeSat puedes obtener los archivos .stl (para imprimir la carcasa)
+                 y el código al final de las diapositivas en el apartado de anexos. Además de eso usaremos:</p>
+            <ul>
+                <li>Arduino Uno - Tarjeta de programación (OBC)</li>
+                <li>Sensor DHT11 - Recolección de información</li>
+                <li>Impresora 3D y filamento PLA - Fabricación de la carcasa del cubesat</li>
+                <li>Jumpers - Conectar el sensor al Arduino</li>
+                <li>SD card - Recolección información</li>
+                <li>Módulo de SD card para Arduino</li>
+                <li>Batería de 9 voltios y su respectivo portabatería - Alimentar el sistema</li>
+            </ul>
+        </div>
+        <div class="content-right">
+            <img src="imagenes/componentes.jpg" alt="Componentes del CubeSat" />
+        </div>
+        <div class="buttons">
+            <button class="btn-anterior btn-red">Anterior</button>
+            <button class="btn-siguiente btn-red">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <div class="content-left">
+            <h2>Paso 2: Realizar el cableado</h2>
+            <p>Conecta todos los componentes usando el siguiente orden: (el formato es Sensor:parte, arduino:entrada, color de cable)
+                apóyate de la imagen</p>
+                <ul>
+                    <li>Modulo SD:
+                        <ul>
+                            <li>SD:SCK a uno: pin 13, "green"</li>
+                            <li>SD:GND a uno: GND.1, "black"</li>
+                            <li>SD:DO", "uno:12", "green"</li>
+                            <li>SD:DI", "uno:11", "green"</li>
+                            <li>SD:CS", "uno:10", "green"</li>
+                        </ul>
+                    </li>
+                    <li>DHT11
+                        <ul>
+                            <li>dht1:GND", "uno:GND.3", "black"</li>
+                            <li>dht1:SDA", "uno:2", "green"</li>
+                            <li>dht1:VCC", "uno:3.3V", "red"</li>
+                        </ul>
+                    </li>
+                    <li>No te olvides de conectar el Arduino a una fuente de energía como lo puede ser: una computadora o una pila</li>
+                </ul>
+        </div>
+        <div class="content-right">
+            <img src="imagenes/Cableado.png" alt="Montaje de la estructura" />
+        </div>
+        <div class="buttons">
+            <button class="btn-anterior btn-red">Anterior</button>
+            <button class="btn-siguiente btn-red">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <div class="content-left">
+            <h2>Paso 3: Cargar el código y probar</h2>
+            <p>Antes de cerrar la estructura, realiza pruebas para verificar que todos los sistemas funcionen correctamente y que los sensores respondan adecuadamente.</p>
+        </div>
+        <div class="content-right">
+            <img src="imagenes/simulador.gif" alt="Pruebas del CubeSat" />
+        </div>
+        <div class="buttons">
+            <button class="btn-anterior btn-red">Anterior</button>
+            <button class="btn-siguiente btn-red">Siguiente</button>
+        </div>
+    </div>
+    <div class="step-container">
+        <div class="content-left">
+            <h2>Paso 4: Montar la estructura e instala sensores</h2>
+            <p>Comienza ensamblando el exoesqueleto del CubeSat y colocando los componentes, asegurándote de que todas las piezas encajen correctamente y estén firmemente sujetas. Puedes usar
+                lo que quieras para unirlos, clavos, pegamento, cinta, con calor, etc. Y no olvides hacer uso de un aislante
+            termico como poliester pues haya arriba suele hacer frio y eso puede causar problemas</p>
+            
+        </div>
+        <div class="content-right">
+            <img src="imagenes/ensamble.png" alt="Cableado interno" />
+        </div>
+        <div class="buttons">
+            <button class="btn-anterior btn-red">Anterior</button>
+            <button class="btn-siguiente btn-red">Siguiente</button>
+        </div>
+    </div>
+
+    
+
+    <div class="step-container">
+        <div class="content-left">
+            <h2>Anexos</h2>
+            <p>Aqui estan los archivos que vas a necesitar para crear tu SURPONG-satV1. Tambien te recomendamos que si quieres aprender todavia mas
+                intentes hacerlo por tu cuenta, desde el codigo hasta la carcasa, algunas herramientas que podriamos recomendarte son:
+                <br>ONSHAPE: para el diseno en 3D
+                <br>Wokwi: Para simular la electronica (incluso podiendo agregar otros sensores)
+                
+            </p>
+            <ul>
+                <li><a href="archivos/carcasa.zip" target="_blank">Archivo carcasa STL</a></li>
+                <li><a href="archivos/codigo.zip" target="_blank">Código fuente del proyecto</a></li>
+                <li><a href="archivos/ECPUE_prot.pdf" target="_blank">Reporte del proyecto</a></li>
+                <li><a href="archivos/simuladorwokwi.zip" target="_blank">simulador del proyecto(wokwi.com)</a></li>
+            </ul>
+        </div>
+        <div class="content-right">
+            <img src="imagenes/anexos.png" alt="Anexos" />
+        </div>
+        <div class="buttons">
+            <button class="btn-anterior btn-red">Anterior</button>
+            <button class="btn-siguiente btn-red">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="topnav" id="topnav">
+        <a href="index.html">Inicio</a>
+        <a href="informacion-recolectada.html">Información recolectada</a>
+        <a href="paso-a-paso.html">Paso a paso</a>
+        <a href="versiones.html">Versiones</a>
+    </div>
+
+</body>
+</html>
+
+ 
